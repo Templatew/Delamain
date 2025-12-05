@@ -14,8 +14,8 @@ const int nb_rows = 3;
 const int nb_cols = 4;
 const int nb_action = 4;  // 0 up, 1 down, 2 left, 3 right
 
-double QTable[nb_rows][nb_cols][nb_action] = {{{0}}};
-double reward[nb_rows][nb_cols] = {{0}};
+double QTable[nb_rows][nb_cols][nb_action] = {0};
+double reward[nb_rows][nb_cols] = {0};
 
 // Void cell (obstacle)
 const Coord void_cell = {1, 1};
