@@ -193,7 +193,7 @@ int main() {
     }
     
     // Visual policy
-    const std::string action_arrows[] = {"↑", "↓", "←", "→"};  // ASCII arrows for compatibility
+    const std::string action_arrows[] = {"↑", "↓", "←", "→"};
     std::cout << "\nLearned Policy (Grid View):" << std::endl;
     std::cout << "-------------------------" << std::endl;
     
