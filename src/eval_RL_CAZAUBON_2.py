@@ -25,7 +25,7 @@ gamma = 0.5     # discount factor that shows how much you care about future (rem
 
 nb_episodes = 100
 epsilon = 1
-decay = 0.99
+decay = 0.9
 
 episode_rewards = []
 

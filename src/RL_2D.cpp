@@ -8,6 +8,8 @@
 #include <iomanip>
 #include <cmath>
 
+using Coord = std::pair<int, int>;
+
 const int nb_rows = 3;
 const int nb_cols = 4;
 const int nb_action = 4;  // 0 up, 1 down, 2 left, 3 right
@@ -16,21 +18,21 @@ double QTable[nb_rows][nb_cols][nb_action] = {{{0}}};
 double reward[nb_rows][nb_cols] = {{0}};
 
 // Void cell (obstacle)
-const std::pair<int, int> void_cell = {1, 1};
+const Coord void_cell = {1, 1};
 
 // End states
-const std::vector<std::pair<int, int>> end_states = {{0, 3}, {1, 3}};
+const std::vector<Coord> end_states = {{0, 3}, {1, 3}};
 
 // Start position
-const std::pair<int, int> start_pos = {2, 0};
+const Coord start_pos = {2, 0};
 
 const double cost = 0.01;
 const double alpha = 0.9;
 const double gamma_val = 0.5;
 
-const int nb_episodes = 100;
+const int nb_episodes = 10000;
 double epsilon = 1.0;
-const double decay = 0.9;
+const double decay = 0.99;
 
 std::vector<double> episode_rewards;
 
@@ -82,7 +84,7 @@ bool reached_end(int row, int col) {
     return false;
 }
 
-std::pair<int, int> move(int row, int col, int action) {
+Coord move(int row, int col, int action) {
     int new_row = row, new_col = col;
     
     // 0 up, 1 down, 2 left, 3 right
@@ -191,7 +193,7 @@ int main() {
     }
     
     // Visual policy
-    const std::string action_arrows[] = {"^", "v", "<", ">"};  // ASCII arrows for compatibility
+    const std::string action_arrows[] = {"↑", "↓", "←", "→"};  // ASCII arrows for compatibility
     std::cout << "\nLearned Policy (Grid View):" << std::endl;
     std::cout << "-------------------------" << std::endl;
     
