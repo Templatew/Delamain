@@ -13,7 +13,6 @@ class TestClient(Client):
         iface.set_timeout(10000)
         
     def on_run_step(self, iface: TMInterface, time: int):
-        """Called during normal gameplay - try to inject inputs"""
         self.step_count += 1
         
         iface.set_input_state(accelerate=True)
@@ -32,7 +31,7 @@ class TestClient(Client):
         self.step_count = 0
         
     def on_simulation_step(self, iface: TMInterface, time: int):
-        """Called during replay validation - full control here!"""
+
         self.step_count += 1
         
         iface.set_input_state(accelerate=True, brake=False, left=False, right=False)
