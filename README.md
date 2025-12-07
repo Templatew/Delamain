@@ -251,11 +251,3 @@ Benefits: Faster iteration, proven libraries, easier debugging
 6. ✅ Implement basic reward function
 7. ✅ Set up LibTorch
 8. 🔄 Start with random agent baseline
-
-## Estimated Timeline
-
-- **Basic Setup**: 1-2 weeks
-- **Working RL Agent (simple corner)**: 3-4 weeks
-- **Robust Agent**: 6-8 weeks
-
-Good luck! The key is iterative development - start simple and gradually add complexity.
