@@ -18,9 +18,12 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 file(GLOB_RECURSE SOURCES ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB_RECURSE HEADERS ${CMAKE_SOURCE_DIR}/include/*.hpp)
 
+qt6_add_resources(resources/resources.qrc)
+
 add_executable(TrackmaniaRL
     ${SOURCES}
     ${HEADERS}
+    ${resources_resources_RCC}
 )
 
 set(CMAKE_CXX_FLAGS_DEBUG "-g")

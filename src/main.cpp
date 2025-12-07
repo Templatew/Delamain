@@ -10,14 +10,12 @@
 
 int main(int argc, char *argv[])
 {
-    // Create Qt application
+
     QApplication app(argc, argv);
 
-    // Create and show the main window
     CarWindow window;
     window.setWindowTitle("CarSimQt - Use Arrow Keys to Move");
     window.show();
 
-    // Run the application event loop
     return app.exec();
 }

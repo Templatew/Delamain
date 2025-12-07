@@ -46,7 +46,7 @@ protected:
 
 private slots:
     /**
-     * @brief Update game state (called by timer ~60 times per second)
+     * @brief Update game state (called by timer ~120 times per second)
      */
     void updateState();
 
@@ -57,7 +57,7 @@ private:
 
     static constexpr int WINDOW_WIDTH = 800;
     static constexpr int WINDOW_HEIGHT = 600;
-    static constexpr int TARGET_FPS = 60;
+    static constexpr int TARGET_FPS = 120;
 };
 
 #endif // CARWINDOW_HPP
