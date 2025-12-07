@@ -443,16 +443,3 @@ model.learn(total_timesteps=100000)
 6. ⬜ Study TMInterfacePublic C++ code to understand the API
 7. ⬜ Implement basic TMInterfaceClient wrapper
 8. ⬜ Test reading state and sending inputs
-
-## Estimated Timeline
-
-| Phase | Description | Duration |
-|-------|-------------|----------|
-| 1 | TMNF + TMInterface setup & testing | 3-5 days |
-| 2 | C++ TMInterface wrapper | 1 week |
-| 3 | RL Environment implementation | 1 week |
-| 4 | RL Algorithm (PPO/DQN) | 1-2 weeks |
-| 5 | Training & iteration | 1-2 weeks |
-| **Total** | **Working agent on simple corner** | **4-6 weeks** |
-
-Good luck! Start simple, iterate fast, and enjoy the process! 🏎️
