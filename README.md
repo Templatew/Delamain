@@ -12,3 +12,8 @@ Trackmania NF RL C++
 * Launch program TMInterface.py
 
 C++ Code not ready
+
+
+```shell
+cd \\wsl$\Debian\home
+```
