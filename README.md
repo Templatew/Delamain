@@ -13,7 +13,3 @@ Trackmania NF RL C++
 
 C++ Code not ready
 
-
-```shell
-cd \\wsl$\Debian\home
-```
